@@ -14,7 +14,7 @@ class Elevador:
         self.descer = descer
        
        
-    def entrar_pessoas(self):
+    def get_entrar_pessoas(self):
 
         if self.num_pessoas < self.capacidade:
             self.num_pessoas += 1
@@ -25,13 +25,13 @@ class Elevador:
             print ("limite atingido ")
 
    
-    def sair_pessoa(self):
+    def get_sair_pessoa(self):
         if self.num_pessoas > 0 and self.andar_inicial >0:
             self.num_pessoas -= 1
             print (" \n Uma pessoa acabou de sair \n ")
 
    
-    def subir_andar (self):
+    def get_subir_andar (self):
 
         if self.andar_inicial >=0 and self.andar_inicial < 3:
             self.andar_inicial +=1
@@ -40,16 +40,16 @@ class Elevador:
         else:
             print ("nao e possivel subir mais um andar ")
                
-    def descer_andar(self):
+    def get_descer_andar(self):
            
         if self.andar_inicial > 0 :
             self.andar_inicial -=1
             print  ("voce esta no andar {} " . format (self.andar_inicial))
 
-        else: 
-            print ("não é possível descer ") 
+        else:
+            print ("não é possível descer ")
 
-    def encerrar(self):
+    def set_encerrar(self):
         print ("Você está encerrando o sistema do elevador ")
         Break
 
@@ -62,16 +62,16 @@ while True:
 
     opcao = int (input ("Escolha a opcao desejada: \n 1= entrar \n 2= sair \n 3= descer \n 4= subir \n"))
     if opcao ==1:
-        elevador.entrar_pessoas()
-    
+        elevador.get_entrar_pessoas()
+   
     if opcao == 2:
-        elevador.sair_pessoa()
-    
+        elevador.get_sair_pessoa()
+   
     if opcao == 3:
-        elevador.descer_andar()
-    
+        elevador.get_descer_andar()
+   
     if opcao == 4:
-        elevador.subir_andar()
+        elevador.get_subir_andar()
 
     if opcao == 5 :
-        elevador.encerrar()
+        elevador.set_encerrar()
